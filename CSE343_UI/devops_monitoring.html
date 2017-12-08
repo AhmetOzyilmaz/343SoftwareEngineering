@@ -35,80 +35,7 @@
 				top: 200px;
 			}
 			
-			#buttonHome{
-				background: transparent;
-				z-index: 100;
-				position: absolute;
-				border: none;
-				padding: 30px 30px;
-				text-align: center;
-				text-decoration: none;
-				display: inline-block;
-				font-size: 16px;
-				left: 530px;
-				top: 310px;
-				
-			}
-			
-			#buttonApps{
-				background:transparent;
-				z-index: 100;
-				position: absolute;
-				border: none;
-				color: white;
-				padding: 30px 30px;
-				text-align: center;
-				text-decoration: none;
-				display: inline-block;
-				font-size: 16px;
-				left: 610px;
-				top: 310px;
-			}
-			
-			#buttonContacts{
-				background:transparent;
-				z-index: 100;
-				position: absolute;
-				border: none;
-				color: white;
-				padding: 30px 30px;
-				text-align: center;
-				text-decoration: none;
-				display: inline-block;
-				font-size: 16px;
-				left: 697px;
-				top: 310px;
-			}
-			
-			#buttonHelp{
-				background:transparent;
-				z-index: 100;
-				position: absolute;
-				border: none;
-				color: white;
-				padding: 30px 30px;
-				text-align: center;
-				text-decoration: none;
-				display: inline-block;
-				font-size: 16px;
-				left: 768px;
-				top: 310px;
-			}
-			
-			#monitorButton{
-				background: transparent;
-				z-index: 100;
-				position: absolute;
-				border: none;
-				color: white;
-				padding: 30px 165px;
-				text-align: center;
-				text-decoration: none;
-				display: inline-block;
-				font-size: 16px;
-				left: 510px;
-				top: 240px;
-			}
+
 			
 			#house_logo{
 				z-index: 1;
@@ -155,19 +82,74 @@
 	
 	<body>
 		
-		<p id="monitor_text"> DevOps Monitor </p>
-		<a href="http://stackoverflow.com"><button type="button" id = "buttonHome"></button></a>
-		<a href="http://stackoverflow.com"><button type="button" id = "buttonApps"></button></a>
-		<a href="http://stackoverflow.com"><button type="button" id = "buttonContacts"></button></a>
-		<a href="http://stackoverflow.com"><button type="button" id = "buttonHelp"></button></a>
-		<a href="http://stackoverflow.com"><button type="button" id = "monitorButton"></button></a>
+		
+		
+		<a href="http://stackoverflow.com">
+			<p id="monitor_text"> DevOps Monitor </p>
+		</a>
+		
+		<a href="http://stackoverflow.com">
+			<img onmouseover = "changePic1(this.id)" onmouseout= "changePic2(this.id)" id="house_logo" src="house_logo.png">
+		</a>
+		
+		<a href="http://stackoverflow.com">
+			<img onmouseover = "changePic1(this.id)" onmouseout= "changePic2(this.id)" id="apps_logo" src="pc2.png">
+		</a>
+		
+		<a href="http://stackoverflow.com">
+			<img onmouseover = "changePic1(this.id)" onmouseout= "changePic2(this.id)" id="contact_logo" src="mail.png">
+		</a>
+		
+		<a href="http://stackoverflow.com">
+			<img onmouseover = "changePic1(this.id)" onmouseout= "changePic2(this.id)" id="help_logo" src="question.png">
+		</a>
+		
 		<img src="tex.jpg" id="bg" alt="">
 		<img src="devops_logo.png" id="devops_logo">
-		<img src="house_logo.png" id="house_logo">
-		<img src="pc2.png" id="apps_logo">
-		<img src="mail.png" id="contact_logo">
-		<img src="question.png" id="help_logo">
 		
+		<script>
+		
+			function changePic1(id_param){
+			
+				if(id_param == "house_logo"){
+					document.getElementById(id_param).src = "house_logo2.png";
+				}
+				
+				if(id_param == "apps_logo"){
+					document.getElementById(id_param).src = "pc2_2.png";
+				}
+				
+				if(id_param == "contact_logo"){
+					document.getElementById(id_param).src = "mail.png";
+				}
+				
+				if(id_param == "help_logo"){
+					document.getElementById(id_param).src = "question.png";
+				}
+				
+			}
+			
+			function changePic2(id_param){
+				
+				if(id_param == "house_logo"){
+					document.getElementById(id_param).src = "house_logo.png";
+				}
+				
+				if(id_param == "apps_logo"){
+					document.getElementById(id_param).src = "pc2.png";
+				}
+				
+				if(id_param == "contact_logo"){
+					document.getElementById(id_param).src = "mail.png";
+				}
+				
+				if(id_param == "help_logo"){
+					document.getElementById(id_param).src = "question.png";
+				}
+			
+			}
+		
+		</script>
 
 	</body>
 	
