@@ -86,3 +86,8 @@ div#file-content-container pre {
     border: 1px solid rgba(0,0,0,0.35);
     overflow: auto;
 }
+div#file-content-container > pre > iframe {
+    width: calc(100% - 50px);
+    height: calc(100% - 50px);
+    
+}    
