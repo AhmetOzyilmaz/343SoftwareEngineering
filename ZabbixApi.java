@@ -159,46 +159,46 @@ public class ZabbixApi {
     public static JSONObject createItem(String name, String key, String hostID, String type, String value_type, String interfaceid, 
                                         String[] applications, String delay, String auth) throws JSONException {
 
-    JSONObject jo = new JSONObject();
-    jo.put("name", name);
-    jo.put("hostid", hostID);
-    jo.put("type", type);
-    jo.put("value_type", value_type);
-    jo.put("interfaceid", interfaceid);
-    jo.put("applications", applications);
-    jo.put("delay", delay);
+        JSONObject jo = new JSONObject();
+        jo.put("name", name);
+        jo.put("hostid", hostID);
+        jo.put("type", type);
+        jo.put("value_type", value_type);
+        jo.put("interfaceid", interfaceid);
+        jo.put("applications", applications);
+        jo.put("delay", delay);
 
 
-    return method("item.create", jo, null, auth);
+        return method("item.create", jo, null, auth);
 
     }
 
     public static JSONObject getItem(String output, String hostids, String search, String sortfield,
     String auth) throws JSONException {
 
-    JSONObject jo = new JSONObject();
-    jo.put("output", output);
-    jo.put("hostids", hostids);
-    jo.put("search", search);
-    jo.put("sortfield", sortfield);
+        JSONObject jo = new JSONObject();
+        jo.put("output", output);
+        jo.put("hostids", hostids);
+        jo.put("search", search);
+        jo.put("sortfield", sortfield);
 
-    return method("item.get", jo, null, auth);
+        return method("item.get", jo, null, auth);
 
     }
 
     public static JSONObject deleteItem(String [] items, String auth) throws JSONException {
 
-    return method("item.delete", null, items, auth);
+        return method("item.delete", null, items, auth);
 
     }
 
     public static JSONObject updateItem(String itemid, String status, String auth) throws JSONException {
 
-    JSONObject jo = new JSONObject();
-    jo.put("itemid", itemid);
-    jo.put("status", status);
+        JSONObject jo = new JSONObject();
+        jo.put("itemid", itemid);
+        jo.put("status", status);
 
-    return method("item.update", jo, null, auth);
+        return method("item.update", jo, null, auth);
 
     }
     
