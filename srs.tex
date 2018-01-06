@@ -11,7 +11,7 @@
 
 \usepackage{fancyhdr}
 
-\usepackage[letterpaper, potrait, margin=1in]{geometry}
+\usepackage[letterpaper, margin=1in]{geometry}
 \usepackage{xcolor}
 
 \usepackage[colorlinks = true,
@@ -217,24 +217,20 @@ it is used in a global script.
 
 \item[$\bullet$]Update Item: This method allows to update existing items or item properties.The item ID property must be defined for each item, all other properties are optional. Only the passed properties will be updated, all others will remain unchanged. Returns an object containing the IDs of the updated items under the itemids property.
 
-
 \end{itemize}
-
-
 
 \subsection{User Classes and Characteristics}
 
-Developers, who wants to monitor the efficiency of the programs they developed.
-Operational users, such as CEO, POs, Scrum Masters, Support Desk, etc. who wants to monitor the clients.
+\item[]Developers, who wants to monitor the efficiency of the programs they developed.
+\item[]Operational users, such as CEO, POs, Scrum Masters, Support Desk, etc. who wants to monitor the clients.
 
 \subsection{Operating Environment}
 
-On web
-Linux
-Windows 7
-Windows 8
-Windows 10
-
+\item[]On web
+\item[]Linux
+\item[]Windows 7
+\item[]Windows 8
+\item[]Windows 10
 
 
 \subsection{Design and Implementation Constraints}
@@ -244,12 +240,12 @@ Windows 10
 
 \subsection{User Documentation}
 
-To use this feature to its maximum capacity it requires knowledge of Mule. There is a quick start on how to use mule at  https://developer.mulesoft.com/tutorials-and-howtos. 
-Additional help and information can be found at 343SoftwareEngineering’s wiki: https://github.com/AhmetOzyilmaz/343SoftwareEngineering/wiki
+To use this feature to its maximum capacity it requires knowledge of Mule. There is a quick start on how to use mule at 
+\newline https://developer.mulesoft.com/tutorials-and-howtos. 
+
+\newline Additional help and information can be found at 343SoftwareEngineering’s wiki: \newline https://github.com/AhmetOzyilmaz/343SoftwareEngineering/wiki
  
 Also Zabbix knowldege is required also. Zabbix official page provides user manuel for starters at https://www.zabbix.com/documentation/3.4/manual
-
-
 
 \subsection{Assumptions and Dependencies}
 Since the project uses Zabbix to monitor, it requires every requirement that Zabbix needs such as Apache and PHP which can be accessed from the following link to Zabbix requirements page:
@@ -259,24 +255,20 @@ To access the monitoring module as well as the other modules of the DevOps Porta
 
 \section{External Interface Requirements}
 
-
-
 \subsection{User Interfaces}
 
 This part will be updated according to progress of the project.
 
 \subsection{Hardware Interfaces}
-
-Memory:
+\begin{itemize}
+\item[]Memory:
     Zabbix requires both physical and disk memory. 128 MB of physical memory and 256 MB of free disk space could be a good starting point. However, the amount of required disk memory obviously depends on the number of hosts and parameters that are being monitored.
-CPU:
+\item[]CPU:
    Zabbix and especially Zabbix database may require significant CPU resources depending on number of monitored parameters and chosen database engine.
-
+\end{itemize}
 \subsection{Software Interfaces}
 
      The project requires Java to be installed on the computer that will monitor. A web browser with cookies and Javascript enabled is required. The system also needs to provide the requirements for Zabbix. Additional information can be found on section 2.7 of this document.
-
-
 
 \subsection{Communications Interfaces}
 
@@ -284,14 +276,11 @@ DevOps Portal Monitoring requires an internet connection and a connection betwee
 
 \section{System Features}
 
-
 This section demonstrates monitoring module of GTU CSE343 DevOps Portal Project most prominent features and explains how they can be used.
-
 
 \subsection{Application Discovery}
 
 Scan nodes and automatically discover appllications.
-
 
 
 \subsection{Alerts}
@@ -301,19 +290,16 @@ Scan nodes and automatically discover appllications.
 \subsection{Viewing Application Data}
 
 
-
-
-
-
-
-
 \section{Other Nonfunctional Requirements}
 
 \subsection{Performance Requirements}
-Memory:
+\begin{itemize}
+\item[]Memory:
     Zabbix requires both physical and disk memory. 128 MB of physical memory and 256 MB of free disk space could be a good starting point. However, the amount of required disk memory obviously depends on the number of hosts and parameters that are being monitored.
-CPU:
+\item[]CPU:
    Zabbix and especially Zabbix database may require significant CPU resources depending on number of monitored parameters and chosen database engine.
+   
+ \end{itemize}
 \subsection{Security Requirements}
 Zabbix does not have any security requirements and thus any type of user can use it without any additional privileges.
 
