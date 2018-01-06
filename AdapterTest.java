@@ -43,8 +43,8 @@ public class AdapterTest {
     @Test
     public void testConnect() {
         System.out.println("connect");
-        String input = "";
-        String expResult = "";
+        String input = "123";
+        String expResult = "expRes";
         String result = Adapter.connect(input);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
@@ -81,8 +81,8 @@ public class AdapterTest {
     @Test
     public void testGetHostInterfaceID() throws Exception {
         System.out.println("getHostInterfaceID");
-        String hostID = "";
-        String expResult = "";
+        String hostID = "1234";
+        String expResult = "result";
         String result = Adapter.getHostInterfaceID(hostID);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
@@ -106,8 +106,8 @@ public class AdapterTest {
     @Test
     public void testCreateItems() throws Exception {
         System.out.println("createItems");
-        String appName = "";
-        String hostID = "";
+        String appName = "app1";
+        String hostID = "123";
         Adapter.createItems(appName, hostID);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
@@ -119,8 +119,8 @@ public class AdapterTest {
     @Test
     public void testCreateGraphs() throws Exception {
         System.out.println("createGraphs");
-        String graphName = "";
-        String item = "";
+        String graphName = "grap1";
+        String item = "itemm1";
         Adapter.createGraphs(graphName, item);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
@@ -132,7 +132,7 @@ public class AdapterTest {
     @Test
     public void testCreateHost() throws Exception {
         System.out.println("createHost");
-        String IP = "";
+        String IP = "123456";
         Adapter.createHost(IP);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
@@ -144,7 +144,7 @@ public class AdapterTest {
     @Test
     public void testFromString() throws Exception {
         System.out.println("fromString");
-        String str = "";
+        String str = "stringtest";
         InputStream expResult = null;
         InputStream result = Adapter.fromString(str);
         assertEquals(expResult, result);
@@ -158,8 +158,8 @@ public class AdapterTest {
     @Test
     public void testGetHost() throws Exception {
         System.out.println("getHost");
-        String hostName = "";
-        String expResult = "";
+        String hostName = "hostFirst";
+        String expResult = "expResult";
         String result = Adapter.getHost(hostName);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
@@ -172,8 +172,8 @@ public class AdapterTest {
     @Test
     public void testDelete_Item() throws Exception {
         System.out.println("delete_Item");
-        String hostID = "";
-        String appName = "";
+        String hostID = "12345";
+        String appName = "chessGame";
         Adapter.delete_Item(hostID, appName);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
@@ -185,9 +185,9 @@ public class AdapterTest {
     @Test
     public void testGet_Item() throws Exception {
         System.out.println("get_Item");
-        String hostID = "";
-        String appName = "";
-        String expResult = "";
+        String hostID = "1234";
+        String appName = "chessName";
+        String expResult = "expRes";
         String result = Adapter.get_Item(hostID, appName);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
