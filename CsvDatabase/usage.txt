@@ -1,0 +1,15 @@
+Methodlar static olduðu için obje oluþturmanýza gerek yok.
+
+---- Ekleme ----
+
+DB.insert(host_id, app_name, item_cpu, item_memory, item_number_process, graph_cpu, graph_memory, graph_number_process)
+
+----------------
+
+
+
+---- Silme ----
+
+DB.delete(host_id, app_name)
+
+---------------
