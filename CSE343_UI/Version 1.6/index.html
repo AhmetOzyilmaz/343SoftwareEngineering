@@ -1,0 +1,46 @@
+<html>
+    <script type="text/javascript" src="jquery.min.js"></script> 
+    <script src="jquery-3.2.1.min.js"></script>
+    
+    <script type="text/javascript"> 
+    function doSomething() { 
+        $.post("panel1.php"); 
+        $.post("panel2.php"); 
+        
+        return false; 
+    } 
+    </script>
+   
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="./index.js"></script>
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body>
+        <div id="header">
+            <img src="./img/logo.png" />
+        </div>
+        <div id="content">
+            <div id="title-container">
+                <header>DevOps Monitoring System</header>
+            </div>
+            <div id="link-container">
+                <i class="fa fa-home"></i>
+                <a href="#" onclick="doSomething();"><i class="fa fa-desktop" id="list-program"></i></a>
+                
+                <i class="fa fa-envelope"></i>
+                <i class="fa fa-question"></i>
+            </div>
+            <div id="file-content-container">
+                <pre>
+                    <div>
+                        <iframe  align="left" style="display: none;" id="panel1" src="panel1.php" frameborder="0" scrolling="no" width="50%" height="100%"  > </iframe>  
+                        <iframe  align="right" style="display: none;" id="panel2" src="panel2.php" frameborder="0" scrolling="no" width="50%" height="100%"  > </iframe>  
+                    </div>
+                </pre>
+            </div>
+        </div>
+        <div id="footer">DevOps Monitoring (GTU CSE343 Term Project). All rights reserved.</div>
+    </body>
+</html>
