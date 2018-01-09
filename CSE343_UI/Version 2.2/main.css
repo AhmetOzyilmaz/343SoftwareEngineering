@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: #eee;
+}
+
+#header {
+    width: calc(100% - 15px);
+    height: 100px;
+    background: #ddd;
+    padding-left: 15px;
+    padding-top: 15px;
+}
+
+#header > img {
+    width: 150px;
+    height: 75px;
+}
+
+/* #footer {
+    width: calc(100% - 3px);
+    height: 20px;
+    background: #ddd;
+    font-family: "Tahoma";
+    font-size: 11px;
+    padding: 3px 0 0 3px;
+} */
+
+
+div#title-container {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    background: rgba(244,244,244,0.7);
+    padding: 10px 0 15px 0;
+}
+
+div#title-container > header {
+    font-family: "Tahoma";
+    font-size: 48px;
+    font-weight: bold;
+}
+
+div#link-container {
+    text-align: center;
+    padding-top: 30px;
+}
+
+div#link-container i {
+    font-size: 64px;
+    margin-right: 25px;
+    margin-left: 25px;
+    color: black;
+    cursor: pointer;
+}
+
+div#link-container i:hover {
+    color: turquoise;
+}
+
+div#file-content-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+div#file-content-container pre {
+    margin-left: 65px;
+    width: calc(100% - 150px);
+    background: rgba(222, 222, 222, 0.22);
+    padding: 7px;
+    text-align: justify;
+    border: 1px solid rgba(0,0,0,0.35);
+    overflow: auto;
+}
+div#file-content-container > pre > iframe {
+    width: calc(100% - 50px);
+}    
+
+div#panel1,
+div#panel2 {
+    text-align: left;
+}
+
+div#panel1 {
+    padding-left: 50px;
+    padding-right: 30px;
+}
+
+div#panel1 ul li,
+div#panel2 ul li {
+    list-style-type: none;
+    margin-bottom: 25px;
+}
+
+div.prog-container { display:none; }
+
+div.prog-container > p {
+    padding-left: 15px;
+}
+
+div#panel-container {
+    overflow: hidden;
+    margin: 15px;
+    border: 1px solid rgba(0,0,0,0.2);
+    padding: 10px;
+    background-color: rgba(0, 169, 255, 0.11);
+}
+
+div#panel-container > div {
+    float: left;
+    width: 50%;
+}
