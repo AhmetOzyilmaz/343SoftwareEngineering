@@ -1,0 +1,11 @@
+{
+	
+	"method" : "create_dep" , 	
+	"app_name" : "bash" , 
+	"app_path" : "string" ,		
+	"public_ip" : "52.204.29.108" ,	
+	"pem_file" : "string" ,  	
+	"usage" : "string",	
+	"object_type": "monitoring_request"
+}
+http://localhost:8081/monitor
