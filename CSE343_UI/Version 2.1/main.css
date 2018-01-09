@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html, body {
@@ -26,19 +27,15 @@ body {
     height: 75px;
 }
 
-#footer {
+/* #footer {
     width: calc(100% - 3px);
     height: 20px;
     background: #ddd;
     font-family: "Tahoma";
     font-size: 11px;
     padding: 3px 0 0 3px;
-}
+} */
 
-#content {
-    width: 100%;
-    height: calc(100% - 138px);
-}
 
 div#title-container {
     width: 100%;
@@ -81,13 +78,45 @@ div#file-content-container pre {
     width: calc(100% - 150px);
     background: rgba(222, 222, 222, 0.22);
     padding: 7px;
-    height: 500px;
     text-align: justify;
     border: 1px solid rgba(0,0,0,0.35);
     overflow: auto;
 }
 div#file-content-container > pre > iframe {
     width: calc(100% - 50px);
-    height: calc(100% - 50px);
-    
 }    
+
+div#panel1,
+div#panel2 {
+    text-align: left;
+}
+
+div#panel1 {
+    padding-left: 50px;
+    padding-right: 30px;
+}
+
+div#panel1 ul li,
+div#panel2 ul li {
+    list-style-type: none;
+    margin-bottom: 25px;
+}
+
+div.prog-container { display:none; }
+
+div.prog-container > p {
+    padding-left: 15px;
+}
+
+div#panel-container {
+    overflow: hidden;
+    margin: 15px;
+    border: 1px solid rgba(0,0,0,0.2);
+    padding: 10px;
+    background-color: rgba(0, 169, 255, 0.11);
+}
+
+div#panel-container > div {
+    float: left;
+    width: 50%;
+}

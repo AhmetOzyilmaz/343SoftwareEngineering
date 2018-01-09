@@ -9,39 +9,40 @@ $usertable='monitor';
 $con = mysqli_connect($hostname,$username, $password) OR DIE ('Unable to connect to database! Please try again later.');
 mysqli_select_db($con,$dbname);
 
-$query = 'SELECT * FROM ' . $usertable;
+$query = 'SELECT DISTINCT prog_name FROM ' . $usertable;
 $result = mysqli_query($con,$query);
 if($result) {
     while($row = mysqli_fetch_array($result)){      
         $new_array[] = $row;     
-    }
+    }    
 }
 else {
 print "Database NOT Found ";
 mysql_close($db_handle);
 
 }
-    
 echo '<ul>';
 foreach($new_array as $array){  
-    
+   // $sql = "SELECT * FROM persons WHERE first_name='john'";
+
+    $result1 = mysqli_query( $con,"SELECT * FROM $usertable WHERE prog_name= '". $array['prog_name'] ."'");
+       
     if($result1) {
         while($row1 = mysqli_fetch_array($result1)){      
             $new_array1[] = $row1;    
-            echo $row1['prog_name'].'<br />';
-            echo $row1['pc_id'].'<br />';
-            echo $row1['pc_ip'].'<br />';  
+            //echo $row1['pc_ip'].'<br />';  
+                         
         }
-    }
-    //tekrar sorgu yap ona göre bastırt ;
-
+    }       
     echo'<li class="list-group-item ">
-        <h4 id = "content" class="list-group-item-heading">'. $array['prog_name'].'</h4>
-        <p class="list-group-item-text"> Host IP : '. $array['pc_ip'].' 1</p>
-        <span class="pull-right">
+        <h4 id = "content" class="list-group-item-heading">'. $array['prog_name'].'</h4>';
+        foreach($new_array1 as $array1){  
+            echo '<p class="list-group-item-text"> Host IP : '. $array1['pc_ip'].' </p>';
+        }
+       
+        echo'<span class="pull-right">
             <button id="toggle" class="btn btn-xs btn-info">Details</button>        
-        </span>
-    </li>';
+        </span>   </li>';
 }
 echo '</ul>';
 
