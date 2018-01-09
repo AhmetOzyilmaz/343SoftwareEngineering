@@ -266,6 +266,11 @@ In User interface the monitored host are displayed. And for every monitored host
 
      The project requires Java to be installed on the computer that will monitor. A web browser with cookies and JavaScript enabled is required. The system also needs to provide the requirements for Zabbix. Additional information can be found on section 2.7 of this document.
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.3,width=\linewidth]{pasted}
+	\caption{User Case }
+\end{figure}
 \subsection{Communications Interfaces}
 
 DevOps Portal Monitoring uses Mule ESB for communication between different parts of the portal. For a new application which is being deployed from deployment part of the portal, a http request is sent to interface through the ESB bus to monitoring. After signal is received and validated if it contains valid information like IP address and the deployed application name to be monitored. Then the information is processed through our end of the ESB bus and signal are sent to zabbix API. from Mule ESB login details of our zabbix server, host information and application information are passed remotely to zabbix. Zabbix handles analysis of host and application in a given host. The same way happens if a undeploy signal is received. Information travels through the Mule ESB bus to monitoring where a host or application is deleted.
